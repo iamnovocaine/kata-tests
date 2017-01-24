@@ -6,7 +6,7 @@ function createCalculator () {
   return new Calculator();
 }
 describe ('string calculator', function() {
-  it('should return 0 if input is empty', function() {
+  it('should return defaultValue if input is empty', function() {
     let calculator = createCalculator();
     let sum = calculator.add('');
     assert.equal(sum, 0);
@@ -16,5 +16,11 @@ describe ('string calculator', function() {
     let calculator = createCalculator();
     let sum = calculator.add('1');
     assert.equal(sum, 1);
+  });
+
+  it('should return single number if input is that number', function() {
+    let calculator = createCalculator();
+    let sum = calculator.add('2');
+    assert.equal(sum, 2);
   });
 });

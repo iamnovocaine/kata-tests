@@ -6,11 +6,14 @@ class Calculator {
   isEmpty(input) {
     return !input;
   }
+  parseSingleNumber(input) {
+    return parseInt(input, 10);
+  }
   add(input) {
     if(this.isEmpty(input)) {
       return this.defaultValue;
     }
-    return 1;
+    return this.parseSingleNumber(input);
   }
 }
 module.exports = Calculator;
