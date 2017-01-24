@@ -23,4 +23,10 @@ describe ('string calculator', function() {
     let sum = calculator.add('2');
     assert.equal(sum, 2);
   });
+
+  it('should return sum of two comma separated value', function() {
+    let calculator = createCalculator();
+    let sum = calculator.add('1,2');
+    assert.equal(sum, 1 + 2);
+  });
 });
