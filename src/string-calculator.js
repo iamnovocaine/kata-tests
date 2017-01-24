@@ -13,8 +13,9 @@ class Calculator {
     return input.indexOf(',') === -1;
   }
   parseMultipleNumbers(input) {
-    return this.parseSingleNumber(input[0]) +
-      this.parseSingleNumber(input[2]);
+    var numbers = input.split(',');
+    return numbers.reduce((a,b) =>
+    this.parseSingleNumber(a) + this.parseSingleNumber(b));
   }
   add(input) {
     if(this.isEmpty(input)) {
