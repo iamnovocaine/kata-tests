@@ -12,12 +12,6 @@ describe ('string calculator', function() {
     assert.equal(sum, 0);
   });
 
-  it('should return 1 if input is 1', function() {
-    let calculator = createCalculator();
-    let sum = calculator.add('1');
-    assert.equal(sum, 1);
-  });
-
   it('should return single number if input is that number', function() {
     let calculator = createCalculator();
     let sum = calculator.add('2');
@@ -36,10 +30,16 @@ describe ('string calculator', function() {
     assert.equal(sum, 1 + 2 + 3 + 4 + 5);
   });
 
-  it('should return sum of thow 3-digit comma separated numbers', function() {
+  it('should return sum of two 3-digit comma separated numbers', function() {
     let calculator = createCalculator();
     let sum = calculator.add('123,456');
     assert.equal(sum, 123 + 456);
+  });
+
+  it('should return sum of two new-line separated numbers', function() {
+    let calculator = createCalculator();
+    let sum = calculator.add('1\n2');
+    assert.equal(sum, 1 + 2);
   });
 
 });

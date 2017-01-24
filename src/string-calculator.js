@@ -10,10 +10,10 @@ class Calculator {
     return parseInt(input, 10);
   }
   isSingleNumber(input) {
-    return input.indexOf(',') === -1;
+    return input.indexOf(',') === -1 && input.indexOf('\n') === -1;
   }
   parseMultipleNumbers(input) {
-    var numbers = input.split(',');
+    var numbers = input.split(/[\n,]/);
     return numbers.reduce((a,b) =>
     this.parseSingleNumber(a) + this.parseSingleNumber(b));
   }
