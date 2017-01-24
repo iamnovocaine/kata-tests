@@ -1,7 +1,16 @@
 "use strict";
-class Calculator{
+class Calculator {
+  constructor() {
+    this.defaultValue = 0;
+  }
+  isEmpty(input) {
+    return !input;
+  }
   add(input) {
-    return 0;
+    if(this.isEmpty(input)) {
+      return this.defaultValue;
+    }
+    return 1;
   }
 }
 module.exports = Calculator;
