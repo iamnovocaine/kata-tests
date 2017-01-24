@@ -1,0 +1,23 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.1",
+  "description": "test-driven development",
+  "author": "Ekaterina Fedorenko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnovocaine/kata-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnovocaine/kata-tests/issues"
+  },
+  "homepage": "https://github.com/iamnovocaine/kata-tests#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+  "test": "mocha"
+  }
+}
