@@ -35,4 +35,11 @@ describe ('string calculator', function() {
     let sum = calculator.add('1,2,3,4,5');
     assert.equal(sum, 1 + 2 + 3 + 4 + 5);
   });
+
+  it('should return sum of thow 3-digit comma separated numbers', function() {
+    let calculator = createCalculator();
+    let sum = calculator.add('123,456');
+    assert.equal(sum, 123 + 456);
+  });
+
 });
